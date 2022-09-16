@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "Nome": "ElisonMartins07",
+      "Login": "elisonMartins",
+      "Senha": "ElisonMart02314ins07",
+      "email": "elisonmartins@gmail.com",
+      "telefone": "87996483257",
+      "cpf": "12345678-45",
+      "Data de Nascimento": "2003-07-16",
+      "Nome da mae": "Luzinete antonia de melo",
+      "Status": "ativo",
+      "Data de inclusao": "2000-12-20",
+      "Data de alteraçao": "2000-12-20"
+    },
+    {
+      "id": 2,
+      "Nome": "ElisonMsaaartinnns07",
+      "Login": "elisonMartins",
+      "Senha": "ElisonMaraft02314ins07",
+      "email": "elisonmartins@gmail.com",
+      "telefone": "87996583257",
+      "CPF": "12345678-45",
+      "Data de Nascimento": "2003-07-16",
+      "Nome da mae": "Luzinete antonia de melo",
+      "Status": "ativo",
+      "Data de inclusao": "2000-12-20",
+      "Data de alteraçao": "2000-12-20"
+    },
+    {
+      "id": 3,
+      "Nome": "ElisonMartins07",
+      "Login": "elisonMartins",
+      "Senha": "ElisonMart02314ins07",
+      "email": "elisonmartins@gmail.com",
+      "telefone": "87996483257",
+      "CPF": "12345678-45",
+      "Data de Nascimento": "2003-07-16",
+      "Nome da mae": "Luzinete antonia de melo",
+      "Status": "inativo",
+      "Data de inclusao": "2000-12-20",
+      "Data de alteraçao": "2000-12-20"
+    },
+    {
+      "id": 4,
+      "Nome": "ElisonMartins07",
+      "Login": "elisonMartins",
+      "Senha": "ElisonMart02314ins07",
+      "email": "elisonmartins@gmail.com",
+      "telefone": "87996483257",
+      "CPF": "12345678-45",
+      "Data de Nascimento": "2003-07-16",
+      "Nome da mae": "Luzinete antonia de melo",
+      "Status": "inativo",
+      "Data de inclusao": "2000-12-20",
+      "Data de alteraçao": "2000-12-20"
+    },
+    {
+      "id": 5,
+      "Nome": "ElisonMartins07",
+      "Login": "elisonMartins",
+      "Senha": "ElisonMart02314ins07",
+      "email": "elisonmartins@gmail.com",
+      "telefone": "87996483257",
+      "CPF": "12345678-45",
+      "Data de Nascimento": "2003-07-16",
+      "Nome da mae": "Luzinete antonia de melo",
+      "Status": "ativo",
+      "Data de inclusao": "2000-12-20",
+      "Data de alteraçao": "2005-09-20"
+    },
+    {
+      "id": 7,
+      "Nome": "Juliso cesar",
+      "Login": "Imperador",
+      "Senha": "imp546541",
+      "email": "elison.martins@upe.br",
+      "telefone": 5,
+      "CPF": 13456789,
+      "Nome da mae": "maee ferreira"
+    },
+    {
+      "Nome": "Seven",
+      "Login": "fer",
+      "Senha": "sioavW",
+      "email": "elisonmm@hotmail.com",
+      "telefone": 5464164,
+      "CPF": 68654164,
+      "Data de Nascimento": "2003-07-16",
+      "Nome da mae": "Mae do jluio",
+      "Status": "bloqueado",
+      "id": 8
+    }
+  ]
+}
