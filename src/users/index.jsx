@@ -1,34 +1,60 @@
 import * as React from "react";
-import { Datagrid, EmailField, List, TextField, DateField, NumberField, ChipField, 
+import { Datagrid, EmailField, List, TextField, DateField, NumberField, ChipField, SimpleList, ReferenceField,
     Create, SimpleForm, TextInput, RadioButtonGroupInput, NumberInput, DateInput, PasswordInput, Edit,
-    useRecordContext } from 'react-admin';
+    useRecordContext, useTranslate } from 'react-admin';
+import { Chip } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
-import { SavedQueriesList, FilterLiveSearch, FilterList, FilterListItem } from 'react-admin';
-import { Card, CardContent } from '@mui/material';
 //Exibir usuarios na tela de Admin
+const QuickFilter = ({ label }) => {
+    const translate = useTranslate();
+    return <Chip sx={{ marginBottom: 1 }} label={translate(label)} />;
+};
 
-export const UserList = () => (
-    <List>
-        <Datagrid rowClick="edit">
-            <NumberField source="id" />
-            <TextField source="Nome" />
-            <TextField source="Login" />
-            <TextField source="Senha" />
-            <EmailField source="email" />
-            <NumberField source="telefone" />
-            <NumberField source="CPF" />
-            <DateField source="Data de Nascimento" />
-            <TextField source="Nome da mae" />
-            <ChipField source="Status" />
-            <DateField source="Data de inclusao" />
-            <DateField source="Data de alteraçao" />
-        </Datagrid>
-    </List>
-);
+const postFilters = [
+    <TextInput label="Procurar" source="q" alwaysOn />,
+    <ChipField label="Nome" source="Nome" defaultValue="" />,
+    <QuickFilter source="Status" label="inativo" defaultValue={'inativo'} />,
+
+];
+
+export const UserList = () => {
+    const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
+    return (
+        <List title={"Usuarios cadastrados"} filters={postFilters}>
+            {isSmall ? (
+                <SimpleList
+                    primaryText={record => record.title}
+                    secondaryText={record => (
+                        <TextField source="Nome" />
+                    )}
+                    tertiaryText={record => (
+                        <NumberField source="id" />
+                    )}
+                />
+            ) : (
+                <Datagrid>
+                    <NumberField source="id" />
+                    <TextField source="Nome" />
+                    <TextField source="Login" />
+                    <TextField source="Senha" />
+                    <EmailField source="email" />
+                    <NumberField source="telefone" />
+                    <NumberField source="CPF" />
+                    <DateField source="Data de Nascimento" />
+                    <TextField source="Nome da mae" />
+                    <ChipField source="Status" />
+                    <DateField source="Data de inclusao" />
+                    <DateField source="Data de alteraçao" />
+                </Datagrid>
+            )}
+        </List>
+    );
+}
 
 //Criar novo usuario
 export const UserCreate = props => (
-    <Create {...props}>
+    <Create {...props} title={"Criar novo usuario"}>
         <SimpleForm>
             <TextInput source="Nome" />
             <TextInput source="Login" />
@@ -56,7 +82,7 @@ export const UserCreate = props => (
 //Nome={<UserName />}    (fica dentro do Edit)
 
 export const UserEdit = () => (
-    <Edit >
+    <Edit>
         <SimpleForm>
             <TextInput source="Nome" />
             <TextInput source="Login" />
